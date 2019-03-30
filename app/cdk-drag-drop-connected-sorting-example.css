@@ -5,6 +5,11 @@
   margin: auto;
   display: inline-block;
   vertical-align: top;
+	background-image: url('images/fondo2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	padding: 10px;
 }
 
 .example-list {
@@ -13,7 +18,10 @@
   float: left;
   border: solid 1px #ccc;
   min-height: 60px;
-  background: white;
+	background-image: url('images/fondo1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 1px;
   overflow: hidden;
   display: block;
