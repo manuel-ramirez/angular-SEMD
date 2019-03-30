@@ -1,0 +1,29 @@
+<div class="example-container">
+  <div
+    cdkDropList
+    #col1List="cdkDropList"
+    [cdkDropListData]="col1"
+    [cdkDropListConnectedTo]="[col2List]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of col1" cdkDrag [cdkDragDisabled]="item.disabled">{{item.value}}</div>
+  </div>
+  <div
+    cdkDropList
+    #col2List="cdkDropList"
+    [cdkDropListData]="col2"
+    [cdkDropListConnectedTo]="[col1List, col3List]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of col2" cdkDrag [cdkDragDisabled]="item.disabled">{{item.value}}</div>
+  </div>
+  <div
+    cdkDropList
+    #col3List="cdkDropList"
+    [cdkDropListData]="col3"
+    [cdkDropListConnectedTo]="[col2List]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of col3" cdkDrag [cdkDragDisabled]="item.disabled">{{item.value}}</div>
+  </div>
+</div>
